@@ -8,11 +8,10 @@
 
 // Class : KeyView Class
 // Input key view and handling the key action.
-//  ¡ ¡ 
-// ¡¡ ¡¡
-//  ¡ ¡ 
-// ¡¡ ¡¡
-
+//  ¡¡ 
+// ¡¡¡¡
+//  ¡¡ 
+// ¡¡¡¡
 
 KeyView::KeyView( void ) 
 {
@@ -59,12 +58,20 @@ bool KeyView::initLayout(void)
 	mainLayout->addLayout( lowerLayout, 3,		0, 		1, 		4 );
 
 	// Regist key clicked event.
-	connect( m_UpBtn,		SIGNAL( clicked( bool ) ), this, SLOT( upClicked( bool ) ) );
-	connect( m_DownBtn,		SIGNAL( clicked( bool ) ), this, SLOT( downClicked( bool ) ) );
-	connect( m_LeftBtn,		SIGNAL( clicked( bool ) ), this, SLOT( leftClicked( bool ) ) );
-	connect( m_RightBtn,	SIGNAL( clicked( bool ) ), this, SLOT( rightClicked( bool ) ) );
-	connect( m_EnterBtn,	SIGNAL( clicked( bool ) ), this, SLOT( enterClicked( bool ) ) );
-	connect( m_ClearBtn,	SIGNAL( clicked( bool ) ), this, SLOT( clearClicked( bool ) ) );
+	connect( m_UpBtn,		SIGNAL( pressed() ), this, SLOT( upPressed() ) );
+	connect( m_DownBtn,		SIGNAL( pressed() ), this, SLOT( downPressed() ) );
+	connect( m_LeftBtn,		SIGNAL( pressed() ), this, SLOT( leftPressed() ) );
+	connect( m_RightBtn,	SIGNAL( pressed() ), this, SLOT( rightPressed() ) );
+	connect( m_EnterBtn,	SIGNAL( pressed() ), this, SLOT( enterPressed() ) );
+	connect( m_ClearBtn,	SIGNAL( pressed() ), this, SLOT( clearPressed() ) );
+
+	// Regist key clicked event.
+	connect( m_UpBtn,		SIGNAL( released() ), this, SLOT( upReleased() ) );
+	connect( m_DownBtn,		SIGNAL( released() ), this, SLOT( downReleased() ) );
+	connect( m_LeftBtn,		SIGNAL( released() ), this, SLOT( leftReleased() ) );
+	connect( m_RightBtn,	SIGNAL( released() ), this, SLOT( rightReleased() ) );
+	connect( m_EnterBtn,	SIGNAL( released() ), this, SLOT( enterReleased() ) );
+	connect( m_ClearBtn,	SIGNAL( released() ), this, SLOT( clearReleased() ) );
 
 	// Set layout to dialog( e.q KeyView ).
 	setLayout( mainLayout );
@@ -80,38 +87,69 @@ bool KeyView::initBinfile(void)
 
 	return ret;
 }
-// Key clicked event.
-void KeyView::upClicked( bool )
+//**********************
+// Press event handler
+//**********************
+void KeyView::upPressed()
 {
-	qDebug() << "Clieked [UP] !" << endl;
+	qDebug() << "Pressed [UP] !" << endl;
 }
 
-// Key clicked event.
-void KeyView::downClicked( bool ) 
+void KeyView::downPressed() 
 {
-	qDebug() << "Clieked [DOWN] !" << endl;
+	qDebug() << "Pressed [DOWN] !" << endl;
 }
 
-// Key clicked event.
-void KeyView::leftClicked( bool ) 
+void KeyView::leftPressed() 
 {
-	qDebug() << "Clieked [LEFT] !" << endl;
+	qDebug() << "Pressed [LEFT] !" << endl;
 }
 
-// Key clicked event.
-void KeyView::rightClicked( bool )
+void KeyView::rightPressed()
 {
-	qDebug() << "Clieked [RIGHT] !" << endl;
+	qDebug() << "Pressed [RIGHT] !" << endl;
 }
 
-// Key clicked event.
-void KeyView::enterClicked( bool )
+void KeyView::enterPressed()
 {
-	qDebug() << "Clieked [ENT] !" << endl;
+	qDebug() << "Pressed [ENT] !" << endl;
 }
 
-// Key clicked event.
-void KeyView::clearClicked( bool )
+void KeyView::clearPressed()
 {
-	qDebug() << "Clieked [CLR] !" << endl;
+	qDebug() << "Pressed [CLR] !" << endl;
 }
+
+//**********************
+// Release event handler
+//**********************
+void KeyView::upReleased()
+{
+	qDebug() << "Released [UP] !" << endl;
+}
+
+void KeyView::downReleased() 
+{
+	qDebug() << "Released [DOWN] !" << endl;
+}
+
+void KeyView::leftReleased() 
+{
+	qDebug() << "Released [LEFT] !" << endl;
+}
+
+void KeyView::rightReleased()
+{
+	qDebug() << "Released [RIGHT] !" << endl;
+}
+
+void KeyView::enterReleased()
+{
+	qDebug() << "Released [ENT] !" << endl;
+}
+
+void KeyView::clearReleased()
+{
+	qDebug() << "Released [CLR] !" << endl;
+}
+

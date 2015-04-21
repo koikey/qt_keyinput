@@ -30,18 +30,23 @@ private:
 	bool initBinfile(void);
 
 public slots:
-	// Up key event handler.
-	void upClicked( bool );
-	// Down key event handler.
-	void downClicked( bool );
-	// Left key event handler.
-	void leftClicked( bool );
-	// Right key event handler.
-	void rightClicked( bool );
-	// Enter key event handler.
-	void enterClicked( bool );
-	// Clear key event handler.
-	void clearClicked( bool );
+
+	// key pressed event handler.
+	void upPressed();
+	void downPressed();
+	void leftPressed();
+	void rightPressed();
+	void enterPressed();
+	void clearPressed();
+
+	// Key released event handler.
+	void upReleased();
+	void downReleased();
+	void leftReleased();
+	void rightReleased();
+	void enterReleased();
+	void clearReleased();
+
 };
 
 #endif /* KEY_VIEW_HEADER */
