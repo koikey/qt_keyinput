@@ -7,6 +7,16 @@
 #include <QPushButton>
 #include <QDebug>
 
+#ifdef __cplusplus
+extern "C"{
+#endif /* __cplusplus */
+#include "presskey.h"
+extern int presskey( int key_type, int evt_type );
+#ifdef __cplusplus
+}
+#endif /* __cplusplus */
+
+
 // Class : KeyView Class
 // Input key view and handling the key action.
 class KeyView : public QDialog

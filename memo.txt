@@ -1,0 +1,2 @@
+ar rcs libpresskey.a presskey.o
+ar rcs libpresskey.a presskey.o

@@ -93,31 +93,37 @@ bool KeyView::initBinfile(void)
 void KeyView::upPressed()
 {
 	qDebug() << "Pressed [UP] !" << endl;
+	presskey( KEY_TYPE_UP , KEY_EVT_PRESSED );
 }
 
 void KeyView::downPressed() 
 {
 	qDebug() << "Pressed [DOWN] !" << endl;
+	presskey( KEY_TYPE_DOWN , KEY_EVT_PRESSED );
 }
 
 void KeyView::leftPressed() 
 {
 	qDebug() << "Pressed [LEFT] !" << endl;
+	presskey( KEY_TYPE_LEFT , KEY_EVT_PRESSED );
 }
 
 void KeyView::rightPressed()
 {
 	qDebug() << "Pressed [RIGHT] !" << endl;
+	presskey( KEY_TYPE_RIGHT , KEY_EVT_PRESSED );
 }
 
 void KeyView::enterPressed()
 {
 	qDebug() << "Pressed [ENT] !" << endl;
+	presskey( KEY_TYPE_ENTER , KEY_EVT_PRESSED );
 }
 
 void KeyView::clearPressed()
 {
 	qDebug() << "Pressed [CLR] !" << endl;
+	presskey( KEY_TYPE_CLEAR , KEY_EVT_PRESSED );
 }
 
 //**********************
@@ -126,30 +132,36 @@ void KeyView::clearPressed()
 void KeyView::upReleased()
 {
 	qDebug() << "Released [UP] !" << endl;
+	presskey( KEY_TYPE_UP , KEY_EVT_RELEASED );
 }
 
 void KeyView::downReleased() 
 {
 	qDebug() << "Released [DOWN] !" << endl;
+	presskey( KEY_TYPE_DOWN , KEY_EVT_RELEASED );
 }
 
 void KeyView::leftReleased() 
 {
 	qDebug() << "Released [LEFT] !" << endl;
+	presskey( KEY_TYPE_LEFT , KEY_EVT_RELEASED );
 }
 
 void KeyView::rightReleased()
 {
 	qDebug() << "Released [RIGHT] !" << endl;
+	presskey( KEY_TYPE_RIGHT , KEY_EVT_RELEASED );
 }
 
 void KeyView::enterReleased()
 {
 	qDebug() << "Released [ENT] !" << endl;
+	presskey( KEY_TYPE_ENTER , KEY_EVT_RELEASED );
 }
 
 void KeyView::clearReleased()
 {
 	qDebug() << "Released [CLR] !" << endl;
+	presskey( KEY_TYPE_CLEAR , KEY_EVT_RELEASED );
 }
 
