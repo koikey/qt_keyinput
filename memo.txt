@@ -1,2 +1,2 @@
-ar rcs libpresskey.a presskey.o
+gcc -c presskey.c -o presskey.o
 ar rcs libpresskey.a presskey.o
